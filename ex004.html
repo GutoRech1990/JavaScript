@@ -21,14 +21,8 @@
     <h1>Hello world</h1>
 
 <script>
-    // alert('Uma mensagem')
-    // document.write('Mensagem')
-    let n1 = Number(prompt("Type a number?"))
-    let n2 = Number(prompt("Type another number?"))
-    let sum = n1 + n2
-    document.write(`First number: ${n1}<br/>`)
-    document.write(`Second number: ${n2}<br/>`)
-    document.write(`Sum: ${n1+n2}`)
+    let name = prompt('What is your name?')
+    document.write(`Hey <strong>${name.toUpperCase()}</strong>, your name has ${name.length} letters.`)
 </script>
 </body>
 </html>
