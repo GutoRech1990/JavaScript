@@ -1,0 +1,74 @@
+
+#Identificadores
+
+* Podem começar com letra, $ ou _
+* Não podem começar com números 
+* Não podem usar palavras reservadas
+* Não pode conter espaços 
+* Pode conter números e letras
+* É possível usar acentos e símbolos 
+
+Dicas
+	>Maiúsculas e minuscules fazem diferença 
+	>Utilizar sempre nomes que fazem sentido
+
+
+#NodeJs
+
+Para abrir no terminal basta digitar a palavra node
+Para sair digita a palavra .exit
+
+
+#ConversãoDeString
+
+* Para número: 
+Number( )
+* Para número inteiro: 
+ParseInt( )
+* Para número flutuante: 
+ParseFloat( )
+* Para String: 
+String( )
+* Tudo maiúsculo: 
+.toUpperCase( )
+
+#ConversãoDeNúmeros
+
+* Para duas casas decimais: 
+n1.toFixed(2)
+* Para trocar ponto por vírgula: 
+n1.replace( ‘.’ ,‘,’ )
+* Para transformar em Real (R$), Dollar (USD), Euro (): 
+n1.toLocalString('pt-BR', {style: 'currency', currency: 'BRL'})
+n1.toLocalString('pt-BR', {style: 'currency', currency: 'USD'})
+n1.toLocalString('pt-BR', {style: 'currency', currency: 'EUR'})
+
+#OperadoresAritméticos
+
+* 5 + 2 = 7
+* 5 - 2 = 3
+* 5 * 2 = 10
+* 5 / 2 = 2.5
+* 5 % 2 = 1 (resto da divisão)
+* 5 **2 = 25 (exponenciação)
+
+Ordem de precedência
+
+1. ()
+2. **
+3. * / %
+4. + -
+5. > < >=
+6. !
+7. &&
+8. ||
+
+#OperadoresLógicos
+
+* ! Negação
+* && conjunção (e)
+* || disjunção (ou)
+
+#OperadorTernário
+
+teste?true:false
