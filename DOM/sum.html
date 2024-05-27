@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #res{
+            padding-top: 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando números!</h1>
+    <br>
+    <input type="number" name="" id="n1"> +
+    <input type="number" name="" id="n2">
+    <input type="button" value="Somar" onclick="sum()"> 
+    <div id="res">Resultado:</div>
+
+    <script>
+        function sum(){
+            let n1 = document.getElementById('n1')
+            let n2 = document.getElementById('n2')
+            let res = document.getElementById('res')
+            n1n = Number(n1.value)
+            n2n = Number(n2.value)
+            res.innerHTML = `Resultado: ${n1n+n2n}`
+        }   
+    </script>
+</body>
+</html>
