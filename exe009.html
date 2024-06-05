@@ -32,14 +32,17 @@
         function verificar(){
             let speed = Number(speedTxt.value)
             msg.innerHTML = `Sua velocidade é de ${speed} km/h`
+            msg.innerHTML += '<p>A velocidade máxima permitida é de 80 km/h'
 
             if (speed <= 80){
                 msg.innerHTML += '<p>Você esta dentro do limite permitido'
             } else {
-                msg.innerHTML += '<p>Você foi <strong>multado</strong>'
+                msg.innerHTML += `<p>Você ultrapassou em ${speed-80} km/h`
+                msg.innerHTML += '<p style="background-color: red;"><strong>MULTADO</strong>'
+                msg.innerHTML += '<p><strong>Tem mesmo que se fuder seu arrombado!!!</strong>'
             }
 
-            msg.innerHTML += 'Lembre-se de sempre dirigir com segurança'
+            msg.innerHTML += 'Lembre-se de sempre dirigir com segurança 😃'
         }
 
         
