@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Que horas são?</h1>
+    <input type="number" name="" id="hour">
+    <button onclick="showImg()">Click here</button>
+    <div id="message">
+        <img src="" alt="" id="newImg">
+    </div>
+
+    <script>
+        hourTxt = document.querySelector("input#hour")
+        message = document.querySelector("div#message")
+        newImg = document.querySelector("img#newImg")
+
+        function showImg(){
+            hour = Number(hourTxt.value)
+            if (hour < 13){
+                newImg.src = "./imagens/bomDia.jpg"
+            } else if (hour < 18){
+                newImg.src = "./imagens/boaTarde.webp"
+            } else {
+                newImg.src = "./imagens/boaNoite.webp"
+            }
+        }
+    </script>
+</body>
+</html>

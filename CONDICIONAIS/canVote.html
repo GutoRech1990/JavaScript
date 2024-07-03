@@ -12,6 +12,8 @@
     <p>Digite a sua idade: <input type="number" name="" id="age"></p><button class="btn btn-warning" onclick="checkAge()" >Verificar</button>
     <br>
     <div id="msg"></div>
+    <span style="background-color: lightpink;"></span>
+    
     
     <script>
         let age = document.querySelector("input#age")
@@ -20,10 +22,12 @@
 
         function checkAge(){
             let ageNumber = Number(age.value)
-            if (ageNumber >= 18){
-                msgHTML.innerHTML =`Você tem ${ageNumber} anos, sendo assim já pode votar :)`
+            if (ageNumber >= 18 && ageNumber <= 65){
+                msgHTML.innerHTML =`Você tem ${ageNumber} anos, sendo assim pode votar, e é <span style="background-color: lightgreen;">obrigatório</span> :)`
+            } else if(ageNumber <18 && ageNumber >=16 || ageNumber > 65){
+                msgHTML.innerHTML = `Você tem ${ageNumber} anos, pode votar, mas não é obrigatório`
             } else{
-                msgHTML.innerHTML = `Você ainda tem ${ageNumber} anos, ainda não pode votar`
+                msgHTML.innerHTML = `Você tem ${ageNumber} anos, então <span style="background-color: lightpink;">não pode votar</span>`
             }
         }
     </script>
