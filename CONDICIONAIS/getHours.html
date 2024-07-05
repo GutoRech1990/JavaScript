@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hour{
+            font-size: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Get Hours</h1>
+
+    <div id="hour">
+        <p>Hora de agora:</p>
+    </div>
+
+    <script>
+        let hours = document.querySelector('div#hour')
+
+        let now = new Date()
+        let hour = now.getHours()
+        let min = now.getMinutes()
+        let formattedMin = min.toString().padStart(2, '0')
+
+        hours.innerHTML += `${hour}:${formattedMin}`
+    </script>
+</body>
+</html>
