@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #weekday{
+            background-color: blue;
+            color: aliceblue;
+            font-size: 5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>É utilizado para opções já definidas, e caso nenhuma seja atendida, então tem o comportamento 'default'</p>
+    <br>
+    <p>switch(expressão)
+        <p>case valor1:</p>
+        <p>break</p>
+        <p>case valor2:</p>
+        <p>break</p>
+        <p>case valor3:</p>
+        <p>break</p>
+    </p>
+
+    <div id="weekday"></div>
+
+    <script>
+        let now = new Date()
+        let weekDay = now.getDay()
+        let dayOfTheWeek = document.querySelector('div#weekday')
+
+        switch(weekDay){
+            case 0:
+                dayOfTheWeek.innerHTML = 'Today is Sunday'
+                break
+            case 1:
+                dayOfTheWeek.innerHTML = 'Today is Monday'
+                break
+            case 2:
+                dayOfTheWeek.innerHTML = 'Today is Tuesday'
+                break
+            case 3:
+                dayOfTheWeek.innerHTML = 'Today is Wednesday'
+                break
+            case 4:
+                dayOfTheWeek.innerHTML = 'Today is Thursday'
+                break
+            case 5:
+                dayOfTheWeek.innerHTML = 'Today is Friday'
+                break
+            case 6:
+                dayOfTheWeek.innerHTML = 'Today is Saturday'
+                break
+        }
+    </script>
+</body>
+</html>
