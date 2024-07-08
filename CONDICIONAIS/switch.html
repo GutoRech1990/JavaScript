@@ -7,7 +7,14 @@
     <style>
         #weekday{
             background-color: blue;
-            color: aliceblue;
+            color: rgb(157, 255, 0);
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        #hour{
+            background-color: rgb(157, 255, 0);
+            color: blue;
             font-size: 5rem;
             text-align: center;
         }
@@ -26,10 +33,11 @@
     </p>
 
     <div id="weekday"></div>
+    <div id="hour"></div>
 
     <script>
-        let now = new Date()
-        let weekDay = now.getDay()
+        let rightNow = new Date()
+        let weekDay = rightNow.getDay()
         let dayOfTheWeek = document.querySelector('div#weekday')
 
         switch(weekDay){
@@ -55,6 +63,15 @@
                 dayOfTheWeek.innerHTML = 'Today is Saturday'
                 break
         }
+
+        let hours = document.querySelector('div#hour')
+
+        let now = new Date()
+        let hour = now.getHours()
+        let min = now.getMinutes()
+        let formattedMin = min.toString().padStart(2, '0')
+
+        hours.innerHTML += `Time now: ${hour}:${formattedMin}`
     </script>
 </body>
 </html>
